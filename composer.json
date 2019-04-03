@@ -1,0 +1,35 @@
+{
+    "autoload": {
+        "psr-4": {
+            "App\\Dao\\": "app/dao",
+            "App\\Models\\": "app/models",
+            "App\\Commands\\": "app/commands"
+        },
+        "classmap": [
+            "vendor/simple-html-dom/simple-html-dom/"
+        ],
+        "files": [
+            "app/helpers.php"
+        ]
+    },
+    "repositories": {
+        "0": {
+            "type": "vcs",
+            "url": "https://github.com/Youpie/simple-html-dom"
+        },
+        "packagist": {
+            "type": "composer",
+            "url": "https://packagist.phpcomposer.com"
+        }
+    },
+    "require": {
+        "php": ">=7.0",
+        "ext-yaf": "*",
+        "monolog/monolog": "^1.23",
+        "simple-html-dom/simple-html-dom": "^1.5",
+        "illuminate/database": "^5.6",
+        "illuminate/events": "^5.6",
+        "filp/whoops": "^2.3",
+        "symfony/console": "^4.2"
+    }
+}

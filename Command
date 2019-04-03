@@ -1,0 +1,21 @@
+#!/usr/bin/env php
+<?php
+/**
+ * @name   ${NAME}
+ * @author sunquan003@ke.com
+ * @desc
+ * @see    http://www.php.net/manual/en/class.yaf-controller-abstract.php
+ */
+
+// application.php
+use App\Commands\HelloCommand;
+use Symfony\Component\Console\Application;
+
+define('ROOT_PATH', dirname(__FILE__));
+define('APP_ENV', ini_get('yaf.environ') ? ini_get('yaf.environ') : "develop");
+define('APP_CLI', false);
+require __DIR__ . '/vendor/autoload.php';
+
+$application = new Application();
+$application->add(new HelloCommand());
+$application->run();
